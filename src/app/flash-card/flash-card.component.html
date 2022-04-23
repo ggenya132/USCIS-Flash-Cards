@@ -1,0 +1,17 @@
+<div
+class="flash-card">
+
+    <div *ngIf="showPrompt; else answers" (click)="onTogglePrompt()" class="flash-card__prompt">
+        <h1>{{_question.prompt}}</h1>
+        <h3>Category: {{_question.category}}</h3>
+        <h5>Subcategory: {{_question.subCategory}}</h5>
+    </div>
+</div>
+
+<ng-template #answers>
+    <div (click)="onTogglePrompt()" class="flash-card__answers">
+        <p *ngFor="let answer of _question.answers">
+            {{answer}}
+        </p>
+    </div>
+</ng-template>

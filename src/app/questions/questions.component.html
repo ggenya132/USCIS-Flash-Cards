@@ -1,0 +1,9 @@
+
+<h1>Flash Cards</h1>
+<p>Question no: {{currentQuestionIndex + 1}}</p>
+<p>Random mode: {{doRandomizeQuestions ?  'Enabled' : 'Disabled'}}</p>
+<app-flash-card [question]="currentQuestion"></app-flash-card>
+<button (click)="onPreviousQuestion()">Previous</button>
+<button (click)="onNextQuestion()">Next</button>
+<button (click)="onToggleRandom()">Toggle Random Questions</button>
+
